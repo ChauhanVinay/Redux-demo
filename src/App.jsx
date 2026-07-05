@@ -17,6 +17,15 @@ function App() {
     dispatch({ type: 'decrement' });
   };
 
+  const incrementByTwoHandler = () => {
+    dispatch({ type: 'INCREMENTBY2' });
+  };
+
+
+  const decrementByTwoHandler = () => {
+    dispatch({ type: 'DECREMENTBY2' });
+  };
+
   const incrementByFiveHandler = () => {
     // The assignment asks to dispatch the action 5 times to increase by 5
     dispatch({ type: 'increment' });
@@ -42,6 +51,14 @@ function App() {
         Decrement
       </button>
       
+      <button onClick={incrementByTwoHandler} style={{ margin: '5px' }}>
+        Increment by 2
+      </button>
+      
+      <button onClick={decrementByTwoHandler} style={{ margin: '5px' }}>
+        Decrement by 2
+      </button>
+
       <button onClick={incrementByFiveHandler} style={{ margin: '5px' }}>
         Increment by 5
       </button>
