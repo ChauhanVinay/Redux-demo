@@ -1,0 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+
+// 1. Import Provider from react-redux
+import { Provider } from 'react-redux';
+// 2. Import your central store
+import store from './store.jsx'; 
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    {/* 3. Wrap your App inside the Provider and pass it the store */}
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+);
