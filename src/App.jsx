@@ -17,13 +17,13 @@ function App() {
     dispatch({ type: 'decrement' });
   };
 
-  const incrementByTwoHandler = () => {
-    dispatch({ type: 'INCREMENTBY2' });
+  const increaseHandler = () => {
+    dispatch({ type: 'increase', amount: 2 });
   };
 
 
-  const decrementByTwoHandler = () => {
-    dispatch({ type: 'DECREMENTBY2' });
+  const decreaseHandler = () => {
+    dispatch({ type: 'decrease', amount: 2 });
   };
 
   const incrementByFiveHandler = () => {
@@ -55,11 +55,11 @@ function App() {
         Decrement
       </button>
       
-      <button onClick={incrementByTwoHandler} style={{ margin: '5px' }}>
+      <button onClick={increaseHandler} style={{ margin: '5px' }}>
         Increment by 2
       </button>
       
-      <button onClick={decrementByTwoHandler} style={{ margin: '5px' }}>
+      <button onClick={decreaseHandler} style={{ margin: '5px' }}>
         Decrement by 2
       </button>
 
